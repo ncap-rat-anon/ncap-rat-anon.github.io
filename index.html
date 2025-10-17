@@ -80,25 +80,26 @@
         <div class="content has-text-justified">
           <p>
             Animals generate behavior through continuous interactions between their neural circuits, bodies, and environment.
-            Embodied simulations, or digital twins, provide a means to study these interactions by testing neural circuit models
-            in biologically realistic settings, thereby complementing and extending experimental studies.
-            Recent efforts have developed embodied simulations of diverse organisms,
-            including the nematode (Sarma, 2018), fly (Lobato-Rios, 2022; Wang-Chen, 2023), salamander (Arreguit, 2023), and rodent (Merel, 2019; Tata Ramalingasetty, 2021).
+            Embodied simulations, or digital twins, provide a means to study these interactions by testing neural circuit
+            models in biologically realistic settings, thereby complementing and extending experimental studies.
+            Recent efforts have developed embodied simulations of diverse organisms, including the nematode (Sarma et al., 2018),
+            fly (Lobato-Rios et al., 2022; Wang-Chen et al., 2023), salamander (Arreguit et al., 2023), and rodent
+            (Merel et al., 2019; Tata Ramalingasetty et al., 2021).
             In parallel, work on biologically realistic neural architectures has sought to integrate circuit connectivity and
-            single-unit dynamics from experimental data into artificial neural networks (Bhattasali, 2024; Lappalainen, 2024),
-            introducing stronger inductive biases than those present in generic architectures such as fully connected
-            multi-layer perceptrons (MLPs) and recurrent neural networks (RNNs). How can we develop embodied simulations that
-            enable the study of increasingly complex bodies and neural circuits?
+            single-unit dynamics from experimental data into artificial neural networks
+            (Bhattasali et al., 2024; Lappalainen et al., 2024), introducing stronger inductive biases than those present in
+            generic architectures such as fully connected multi-layer perceptrons (MLPs) and recurrent neural networks (RNNs).
+            How can we develop embodied simulations that enable the study of increasingly complex bodies and neural circuits?
 
-            In this work, we tackle this challenge through coordinated advances across the simulation environment,
-            neural architecture, and optimization algorithm. We introduce Rat v2, a biomechanical model that provides a realistic
-            and efficient tool for simulating rat behavior. We integrate this body with a biologically realistic neural circuit
-            model for locomotion based on mammalian spinal circuits, incorporating cell-type-specific connectivity and intrinsic neural dynamics.
-            We also adopt a parallelized algorithm to support high-throughput parameter optimization.
+            In this work, we tackle the challenge through coordinated advances across the simulation environment,
+            neural architecture, and optimization algorithm. We introduce Rat v2, a biomechanical model that provides an
+            efficient and flexible tool for simulating rat behavior. We integrate this body with a biologically realistic neural
+            circuit model for locomotion based on mammalian spinal circuits, incorporating cell-type-specific connectivity and
+            intrinsic neural dynamics. We also adopt a parallelized algorithm to support high-throughput parameter optimization.
 
-            The integrated system learns to locomote without requiring imitation data, and it produces naturalistic gaits and
+            The integrated system learns to locomote without using imitation learning, and it produces naturalistic gaits and
             locomotion frequencies that match experimental observations of rats. In ongoing work, we are investigating simplified
-            muscle models as well as vestibular and visual signals for hierarchical control. Together, our tools and insights can
+            muscle models as well as vestibular and visual signals for hierarchical control. Together, our tools and insights
             enable further exploration of more complex embodied simulations.
           </p>
         </div>
