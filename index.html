@@ -4,7 +4,7 @@
   <!-- Metadata -->
   <meta charset="utf-8">
   <meta name="description"
-        content="NCAP Rat, a biologically inspired ANN architecture for rat locomotion based on neural circuits in the limbs and spinal cord of mammals.">
+        content="Rat NCAP, a biologically inspired ANN architecture for rat locomotion based on neural circuits in the limbs, spinal cord, and brainstem.">
   <meta name="keywords" content="neuroscience, motor control">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
@@ -43,7 +43,7 @@
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">Neural Circuit Architectural Priors for Rat Locomotion</h1>
 
-          <!-- <div class="column has-text-centered">
+          <div class="column has-text-centered">
               <span class="link-block">
                 <a href="https://github.com/ncap-rat-anon/ncap-rat"
                     class="external-link button is-normal is-rounded is-dark">
@@ -53,7 +53,7 @@
                   <span>Code</span>
                   </a>
               </span>
-          </div> -->
+          </div>
         </div>
       </div>
     </div>
@@ -103,21 +103,14 @@
   <div class="container is-max-desktop">
     <div class="columns is-multiline">
       <div class="column is-12">
-        <!-- <h2 class="title">1. Title</h2> -->
-        <h2 class="title">1. Gait Behaviors</h2>
+        <h2 class="title">1. Locomotion Behavior</h2>
         <p>
-          Rat v2 trained with a population-based evolutionary algorithm on an episodically-sampled variable speed objective produces a variety of gaits.
+          Rat NCAP learns to stand, walk, trot, and bound within a single model, producing naturalistic stepping and speed-dependent gaits. Prior work in this rat relied on imitation learning to obtain naturalistic behavior [Aldarondo et al., 2024, Zhang et al., 2025] or produced visibly unrealistic movement without it [Merel et al., 2019]. Rat NCAP achieves comparable naturalism using only simple velocity rewards, demonstrating the powerful inductive bias of biological neural circuits.
         </p>
-      </div>
-      <div class="column is-6">
-        <div style="text-align: center; width: 100%;"><i>chestnut rat skin</i></div>
-      </div>
-      <div class="column is-6">
-        <div style="text-align: center; width: 100%;"><i>collision geometry</i></div>
       </div>
       <div class="column is-12">
         <video controls loop playsinline height="100%" style="display: block; margin: 0 auto;">
-          <source src="static/videos/rat_ncap_walk_combined.mp4" type="video/mp4" />
+          <source src="static/videos/video_multifixed.mp4" type="video/mp4" />
         </video>
       </div>
     </div>
@@ -125,97 +118,88 @@
 </section>
 
 
-<!-- Skins -->
-<!-- <section class="section">
+<!-- Videos 2 -->
+<section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-multiline">
       <div class="column is-12">
-        <h2 class="title">2. Skins</h2>
+        <h2 class="title">2. Gait Transitions</h2>
+        <p>
+          Increasing brainstem command within a single episode reveals distinct gait patterns at each speed, consistent with speed-dependent recruitment of distinct locomotor patterns. Notably, gait transitions are not trained and reflect zero-shot generalization.
+        </p>
       </div>
-
-      <div class="column is-12">
-        
-      </div>
-      <div class="column is-4">
-        <img src="static/images/chestnut.png" style="margin: -100px 0 0 0; overflow: hidden"/>
-      </div>
-      <div class="column is-4">
-        <video controls loop playsinline height="100%">
-          <source src="static/videos/example.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <div class="column is-4">
-        <video controls loop playsinline height="100%">
-          <source src="static/videos/example.mp4" type="video/mp4" />
+      <div class="column is-12 ">
+        <video controls loop playsinline height="100%" style="display: block; margin: 0 auto;">
+          <source src="static/videos/video_variable.mp4" type="video/mp4" />
         </video>
       </div>
     </div>
   </div>
-</section> -->
+</section>
 
 
 <!-- Videos 3 -->
-<!-- <section class="section">
+<section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-multiline">
       <div class="column is-12">
-        <h2 class="title">3. Title</h2>
-        <p></p>
-      </div>
-
-      <div class="column is-6 is-offset-3">
-        <h3 class="subtitle mb-4">Subtitle</h3>
-        <p class="mb-4"></p>
-        <video controls loop playsinline height="100%">
-          <source src="static/videos/example.mp4" type="video/mp4" />
-        </video>
-      </div>
-
-      <div class="column is-6">
-        <h3 class="subtitle mb-4">Subtitle</h3>
-        <p class="mb-4"></p>
-        <video controls loop playsinline height="100%">
-          <source src="static/videos/example.mp4" type="video/mp4" />
-        </video>
-      </div>
-
-      <div class="column is-6">
-        <h3 class="subtitle mb-4">Subtitle</h3>
-        <p class="mb-4"></p>
-        <video controls loop playsinline height="100%">
-          <source src="static/videos/example.mp4" type="video/mp4" />
-        </video>
-      </div>
-    </div>
-  </div>
-</section> -->
-
-
-<!-- Videos 4 -->
-<!-- <section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-multiline">
-      <div class="column is-12">
-        <h2 class="title">4. Title</h2>
+        <h2 class="title">3. Gait Shapes</h2>
         <p>
-          
+          The neuromechanical interface determines not only trainability, but also the qualitative character of learned gaits.
+          Despite similar asymptotic reward, the flexor-extensor interface produces qualitatively different locomotion: it uses substantially more negative mechanical power than the other interfaces, storing and returning energy through its antagonistic spring structure analogous to tendon compliance.
+          This compliance is visible in joint trajectories: position and position-stiffness produce sharp arcs with brief ground contact, while flexor-extensor produces rounded trajectories with extended stance as the paw deforms along the ground.
         </p>
       </div>
       <div class="column is-12">
-        <video controls loop playsinline height="100%">
-          <source src="static/videos/example.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <div class="column is-6 is-offset-3">
-        <h3 class="subtitle mb-4">MLP</h3>
-        <p class="mb-4"></p>
-        <video controls loop playsinline height="100%">
+        <video controls loop playsinline height="100%" style="display: block; margin: 0 auto;">
           <source src="static/videos/example.mp4" type="video/mp4" />
         </video>
       </div>
     </div>
   </div>
-</section> -->
+</section>
+
+
+<!-- Videos 4 -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-multiline">
+      <div class="column is-12">
+        <h2 class="title">4. Cell-Type Ablations</h2>
+        <p>
+          A central advantage of a biologically grounded circuit model is the ability to perform targeted <i>in silico</i> ablations of identified cell types, which is an analysis not possible with black-box controllers.
+          In rodents, genetic ablation of V0v excitatory neurons eliminates trot while leaving walk and bound intact, and further ablation of V0d inhibitory neurons removes all alternating gaits, leaving bound as the only coordinated pattern [Bellardita and Kiehn, 2015].
+          Rat NCAP replicates both phenotypes: V0v ablation selectively removes trot while preserving walk, and combined V0v and V0d ablation eliminates all alternating gaits, leaving only bound.
+          These results validate the RG circuit's functional organization, supporting its use for generating experimentally testable predictions about gait impairments through targeted cell-type ablations.
+        </p>
+      </div>
+
+      <div class="column is-4">
+        <h3 class="subtitle mb-4 has-text-centered">Intact</h3>
+        <p class="mb-4"></p>
+        <video controls loop playsinline height="100%">
+          <source src="static/videos/video_ablation_baseline.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <div class="column is-4">
+        <h3 class="subtitle mb-4 has-text-centered">Ablated: V0v, V3f, V3a</h3>
+        <p class="mb-4"></p>
+        <video controls loop playsinline height="100%">
+          <source src="static/videos/video_ablation_v0v_v3a_v3f.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <div class="column is-4">
+        <h3 class="subtitle mb-4 has-text-centered">Ablated: V0v, V0d</h3>
+        <p class="mb-4"></p>
+        <video controls loop playsinline height="100%">
+          <source src="static/videos/video_ablation_v0v_v0d.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <!-- Footer -->
